@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BougePorte1 : MonoBehaviour {
+    private float timeleft = 225.0f;
+    public GameObject Porte;
+    public Quaternion initialrotation;
+
+
+    // Use this for initialization
+    void Start()
+    {
+        Porte = GameObject.Find("Porte 1");
+        initialrotation = Porte.transform.rotation;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timeleft -= Time.deltaTime;
+
+        if (timeleft <66.5)
+        {
+            if (timeleft > 64.3)
+
+            {
+                this.transform.Rotate(new Vector3(0,0, 40 * Time.deltaTime));
+            }
+        }
+        else this.transform.Rotate(Vector3.zero);
+
+        if (timeleft < 59.5)
+        {
+            if (timeleft > 58.5)
+
+            {
+                transform.rotation = initialrotation;
+            }
+        }
+
+        else this.transform.Rotate(Vector3.zero);
+
+        if (timeleft < 20.5)
+        {
+            if (timeleft > 18.3)
+
+            {
+                this.transform.Rotate(new Vector3(0,0, -40 * Time.deltaTime));
+            }
+        }
+
+        if (timeleft < 9.5)
+        {
+            if (timeleft > 8.5)
+
+            {
+                transform.rotation = initialrotation;
+            }
+        }
+
+        else this.transform.Rotate(Vector3.zero);
+
+        if (timeleft < -2.5)
+        {
+            Reset();
+        }
+
+    }
+    private void Reset()
+    {
+        timeleft = 225.0f;
+    }
+}

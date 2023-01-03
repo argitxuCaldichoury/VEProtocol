@@ -1,0 +1,71 @@
+using UnityEngine;
+
+public class MovementManager:MonoBehaviour {
+
+	public float speed = 5f;
+	public float speedRotation= 100;
+
+	private Rigidbody rigidBody;
+	private bool isMoving;
+    private bool isMovingBack;
+    private float directionOfTurn;// -1 or +1                             // Use this for initializatio
+
+ 
+   
+
+   void Start () {
+		rigidBody = GetComponent<Rigidbody> (); 
+    }
+
+    // Update is clled once per frame
+    void Update () {
+        Move();
+		Turn ();
+        MoveBack();
+    }
+	void Move(){
+		if (isMoving) {
+			this.transform.Translate( Vector3.forward * Time.deltaTime * speed);
+		} 
+
+	}
+
+	void Turn(){
+		float turn = directionOfTurn * speedRotation * Time.deltaTime; // speedRotation*Time.deltaTime= speed per frame 
+        this.transform.Rotate(new Vector3(0, turn, 0));
+
+    }
+    void MoveBack()
+    {
+        if (isMovingBack)
+        {
+            this.transform.Translate(Vector3.forward*-1 * Time.deltaTime * speed);
+        }
+
+    }
+
+
+    public void SetIsMoving(bool b){
+		isMoving = b;
+	}
+
+    public void SetIsMovingBack(bool b)
+    {
+        isMovingBack = b;
+    }
+
+    public void TurnInLeftDirection(){
+		directionOfTurn = -1;
+	}
+
+	public void TurnInRightDirection(){
+		directionOfTurn = 1;
+	}
+
+    public void StopRotation()
+    {
+        directionOfTurn = 0;
+
+    }
+    
+}

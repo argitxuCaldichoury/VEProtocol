@@ -1,0 +1,52 @@
+using UnityEngine;
+
+
+public class Cameraa : MonoBehaviour {
+
+	private MovementManager movementManager;
+   
+    // Use this for initialization
+    void Start () {
+		movementManager = GetComponent<MovementManager> ();
+   
+    }
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+	public void MoveForward(){
+		print ("MoveForward");
+		movementManager.SetIsMoving (true);
+
+	}
+
+    public void MoveBackward()
+{
+    print("MoveBack");
+    movementManager.SetIsMovingBack(true);
+
+}
+   
+        public void StopMove(){
+		print ("StopMove");
+		movementManager.SetIsMoving (false);
+        movementManager.SetIsMovingBack(false);
+	}
+
+
+
+	public void TurnLeft(){
+		movementManager.TurnInLeftDirection ();
+	}
+
+	public void TurnRight(){
+		movementManager.TurnInRightDirection ();
+	}
+	public void StopRotation(){
+		movementManager.StopRotation ();
+	}
+}
+
+    
+

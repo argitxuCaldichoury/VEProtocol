@@ -1,0 +1,505 @@
+public class InputManager3 : MonoBehaviour {
+
+    public Cameraa cube;
+    private MovementManager movementManager;
+    public float timeleft = 225.0f;
+    public GameObject Cube1;
+    public GameObject Cube2;
+    public GameObject Cube3;
+    public GameObject Main;
+    public Vector3 initialposition; 
+    private float[] values;
+    private int randomValue;
+    private float randturn;
+    public int count;
+
+    // Use this for initialization
+    void Start()
+    {
+        Cube1 = GameObject.Find("Cube 1");
+        Cube2 = GameObject.Find("Cube 2");
+        Cube3 = GameObject.Find("Cube 3");
+        Main = GameObject.Find("[CameraRig]");
+
+        initialposition = Main.transform.position;
+
+        movementManager = GetComponent<MovementManager>();
+        values = new float[2];
+        randomValue = Random.Range(0, 2);
+        values[1] = -1.0f;
+        values[0] = 1.0f;
+        randturn = values[randomValue];
+
+        count = 0;
+
+    }
+
+
+
+    // Update is called once per frame
+    public void Update()
+    {
+        timeleft -= Time.deltaTime;  
+
+        if (timeleft < 224)
+        {
+            if (timeleft > 220.5)
+            {
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 219)
+        {
+            if (timeleft > 214)
+            {
+
+                cube.MoveForward();
+
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 210)
+        {
+            if (timeleft > 209)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-35, Vector3.up);
+            } 
+
+            else cube.StopRotation();
+        }
+
+
+
+        if (timeleft < 209)
+        {
+            if (timeleft > 206)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft <202)
+        {
+            if (timeleft > 201)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-100, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+        if (timeleft < 201)
+
+        {
+            if (timeleft > 195)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 191)
+        {
+            if (timeleft > 190)
+            {
+                
+                this.transform.localRotation = Quaternion.AngleAxis(-190, Vector3.up);
+      
+
+            }
+
+            else cube.StopRotation();
+
+        }
+
+        if (timeleft < 190)
+        {
+            if (timeleft > 185)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+        if (timeleft < 181)
+        {
+            if (timeleft > 180)
+            {
+                transform.localRotation = Quaternion.AngleAxis(-280, Vector3.up);
+            }
+
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft < 180)
+        {
+            if (timeleft > 175)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 171)
+        {
+            if (timeleft > 170)
+            {
+             
+                transform.position = Cube1.transform.position;
+                transform.localRotation = Quaternion.AngleAxis(-280, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft < 169)
+        {
+            if (timeleft > 158.5)
+            { 
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+    
+       if (timeleft <148.5)
+       
+                if (timeleft > 147.5)
+                {
+
+                transform.localRotation = Quaternion.AngleAxis(-343, Vector3.up);
+            }
+            else cube.StopRotation();
+
+
+       if (timeleft < 146.5)
+        {
+            if (timeleft > 143)
+            {
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 141.5)
+        {
+            if (timeleft > 136.5)
+            {
+
+                cube.MoveForward();
+
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft <132.5)
+        {
+            if (timeleft > 131.5)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-285, Vector3.up);
+            } 
+
+            else cube.StopRotation();
+        }
+
+
+
+        if (timeleft < 131.5)
+        {
+            if (timeleft > 128.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft <124.5)
+        {
+            if (timeleft > 123.5)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-342, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+        if (timeleft < 123.5)
+
+        {
+            if (timeleft > 118.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 114.5)
+        {
+            if (timeleft >113.5)
+            {
+                
+                this.transform.localRotation = Quaternion.AngleAxis(-430, Vector3.up);
+
+
+            }
+
+            else cube.StopRotation();
+
+        }
+
+        if (timeleft <113.5)
+        {
+            if (timeleft > 108.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+        if (timeleft < 104.5)
+        {
+            if (timeleft > 103.5)
+            {
+                transform.localRotation = Quaternion.AngleAxis(-520, Vector3.up);
+            }
+
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft <103.5)
+        {
+            if (timeleft > 98.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 94.5)
+        {
+            if (timeleft > 93.5)
+            {
+             
+                transform.position = Cube2.transform.position;
+                transform.localRotation = Quaternion.AngleAxis(-520, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft < 92.5)
+        {
+            if (timeleft > 82)
+            {
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+    
+       if (timeleft <72)
+       
+                if (timeleft > 71)
+                {
+
+                transform.localRotation = Quaternion.AngleAxis(-583, Vector3.up);
+            }
+            else cube.StopRotation();
+
+
+        if (timeleft <71)
+        {
+            if (timeleft > 68.5)
+            {
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 65.5)
+        {
+            if (timeleft > 60.5)
+            {
+
+                cube.MoveForward();
+
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 56.5)
+        {
+            if (timeleft > 55.5)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-527, Vector3.up);
+            }
+
+            else cube.StopRotation();
+        }
+
+
+
+        if (timeleft < 55.5)
+        {
+            if (timeleft > 52.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 48.5)
+        {
+            if (timeleft > 47.5)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-580, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+        if (timeleft < 47.5)
+
+        {
+            if (timeleft > 41.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 37.5)
+        {
+            if (timeleft > 36.5)
+            {
+
+                this.transform.localRotation = Quaternion.AngleAxis(-670, Vector3.up);
+
+
+            }
+
+            else cube.StopRotation();
+
+        }
+
+        if (timeleft <36.5)
+        {
+            if (timeleft > 31.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+        if (timeleft <27.5)
+        {
+            if (timeleft > 26.5)
+            {
+                transform.localRotation = Quaternion.AngleAxis(-760, Vector3.up);
+            }
+
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft < 26.5)
+        {
+            if (timeleft > 22.5)
+            {
+
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+
+        if (timeleft < 21.5)
+        {
+            if (timeleft > 20.5)
+            {
+
+                transform.position = Cube3.transform.position;
+                transform.localRotation = Quaternion.AngleAxis(-760, Vector3.up);
+            }
+            else cube.StopRotation();
+        }
+
+
+        if (timeleft < 20.5)
+        {
+            if (timeleft > 10.5)
+            {
+                cube.MoveForward();
+            }
+            else cube.StopMove();
+        }
+
+        if (timeleft < 0.5)
+        {
+            if (timeleft > -2.5)
+            {
+
+                transform.localRotation = Quaternion.AngleAxis(-820, Vector3.up);
+            }
+            else
+                if (count < 10)
+            {
+                Reset();
+            }
+            if (count > 9)
+            { cube.StopMove();
+                cube.StopRotation();
+                
+            }
+
+           
+        }
+
+    }
+
+
+
+
+
+    void Reset()
+    {
+        values = new float[2];
+        randomValue = Random.Range(0, 2);
+        values[1] = -1.0f;
+        values[0] = 1.0f;
+        randturn = values[randomValue];
+        timeleft = 225.0f;
+    }

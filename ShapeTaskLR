@@ -1,0 +1,161 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TâcheFormeSalon : MonoBehaviour
+{
+
+    public GameObject CercleCalendrier;
+    public GameObject RectangleCalendrier;
+    public GameObject CarréCalendrier;
+    public GameObject LosangeCalendrier;
+
+    public GameObject CercleLivre;
+    public GameObject RectangleLivre;
+    public GameObject CarréLivre;
+    public GameObject HexagoneLivre;
+
+    public GameObject CercleStylo;
+    public GameObject TriangleStylo;
+    public GameObject EtoileStylo;
+
+    public GameObject CercleLampe;
+    public GameObject CarréLampe;
+
+    public GameObject RectangleCH;
+    public GameObject CarréCH;
+    public GameObject EtoileCH;
+
+    public GameObject CercleRadio;
+    public GameObject EtoileRadio;
+    public GameObject LosangeRadio;
+    public GameObject HexagoneRadio;
+
+    public GameObject CercleAP;
+    public GameObject EtoileAP;
+    public GameObject TriangleAP;
+    public GameObject RectangleAP;
+
+
+    public float timeleft = 2690.0f;
+    // Use this for initialization
+    void Start()
+    {
+        RectangleCalendrier.SetActive(false);
+        CercleCalendrier.SetActive(false);
+        LosangeCalendrier.SetActive(false);
+        CarréCalendrier.SetActive(false);
+
+        HexagoneLivre.SetActive(false);
+        RectangleLivre.SetActive(false);
+        CercleLivre.SetActive(false);
+        CarréLivre.SetActive(false);
+
+        EtoileStylo.SetActive(false);
+        TriangleStylo.SetActive(false);
+        CercleStylo.SetActive(false);
+
+        CarréCH.SetActive(false);
+        RectangleCH.SetActive(false);
+        EtoileCH.SetActive(false);
+
+        CarréLampe.SetActive(false);
+        CercleLampe.SetActive(false);
+        
+        EtoileRadio.SetActive(false);
+        LosangeRadio.SetActive(false);
+        HexagoneRadio.SetActive(false);
+        CercleRadio.SetActive(false);
+
+        RectangleAP.SetActive(false);
+        EtoileAP.SetActive(false);
+        TriangleAP.SetActive(false);
+        CercleAP.SetActive(false);
+   
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        timeleft -= Time.deltaTime;
+
+
+
+        if (timeleft < 2275)
+        {
+            if (timeleft > 2047.5)
+            {
+        
+                RectangleCalendrier.SetActive(true);
+         
+            }
+           
+        }
+
+        if (timeleft < 2047.5)
+        {
+            if (timeleft > 1820)
+            {
+                
+                RectangleCalendrier.SetActive(true);
+                HexagoneLivre.SetActive(true);
+                EtoileStylo.SetActive(true);
+            }
+     
+        }
+
+        if (timeleft < 1820)
+        {
+            if (timeleft > 1592.5)
+
+            {   RectangleCalendrier.SetActive(false);
+                HexagoneLivre.SetActive(false);
+                EtoileStylo.SetActive(false);
+                TriangleStylo.SetActive(true);
+                CarréCH.SetActive(true);
+                CarréLampe.SetActive(true);
+                CercleLampe.SetActive(true);
+            }
+        
+        }
+        if (timeleft < 1592.5)
+        {
+            if (timeleft > 1365)
+            {
+                TriangleAP.SetActive(true);
+                TriangleStylo.SetActive(false);
+                CarréCH.SetActive(false);
+                CarréLampe.SetActive(false);
+                CercleLampe.SetActive(false);
+            }
+
+        }
+        if (timeleft < 1365)
+        {
+            if (timeleft > 1137.5)
+            {
+                RectangleLivre.SetActive(true);
+                RectangleCH.SetActive(true);
+                TriangleAP.SetActive(false);
+            }
+           
+        }
+
+
+
+        if (timeleft < 1137.5)
+        {
+            if (timeleft > 910)
+            {
+                CercleCalendrier.SetActive(true);
+                HexagoneLivre.SetActive(true);
+                EtoileStylo.SetActive(true);
+                EtoileRadio.SetActive(true);
+                EtoileAP.SetActive(true);
+                LosangeRadio.SetActive(true);
+                RectangleLivre.SetActive(false);
+                RectangleCH.SetActive(false);
+            }   
+     
+        }

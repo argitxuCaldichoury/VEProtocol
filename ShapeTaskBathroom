@@ -1,0 +1,246 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TâcheFormeSdB : MonoBehaviour {
+
+    public float timeleft = 2275.0f;
+
+    public GameObject CercleDissolvant;
+    public GameObject RectangleDissolvant;
+    public GameObject TriangleDissolvant;
+    public GameObject HexagoneDissolvant;
+
+    public GameObject RectangleVentouse;
+    public GameObject LosangeVentouse;
+    public GameObject TriangleVentouse;
+    public GameObject CercleVentouse;
+
+    public GameObject CarréMascara;
+    public GameObject TriangleMascara;
+    public GameObject LosangeMascara;
+
+    public GameObject LosangePP;
+    public GameObject RectanglePP;
+    public GameObject TrianglePP;
+
+    public GameObject LosangeDentifrice;
+    public GameObject EtoileDentifrice;
+    public GameObject CarréDentifrice;
+    public GameObject TriangleDentifrice;
+
+    public GameObject RectanglePansement;
+    public GameObject CerclePansement;
+    public GameObject EtoilePansement;
+
+    public GameObject HexagonePQ;
+    public GameObject RectanglePQ;
+    public GameObject CarréPQ;
+    public GameObject CerclePQ;
+    public GameObject EtoilePQ;
+
+    // Use this for initialization
+    void Start () {
+
+    CercleDissolvant.SetActive(false);
+    RectangleDissolvant.SetActive(false);
+    TriangleDissolvant.SetActive(false);
+    HexagoneDissolvant.SetActive(false);
+
+    RectangleVentouse.SetActive(false);
+    LosangeVentouse.SetActive(false);
+    TriangleVentouse.SetActive(false);
+    CercleVentouse.SetActive(false);
+
+    CarréMascara.SetActive(false);
+    TriangleMascara.SetActive(false);
+    LosangeMascara.SetActive(false);
+
+    LosangePP.SetActive(false);
+    RectanglePP.SetActive(false);
+    TrianglePP.SetActive(false);
+
+    LosangeDentifrice.SetActive(false);
+    EtoileDentifrice.SetActive(false);
+    CarréDentifrice.SetActive(false);
+    TriangleDentifrice.SetActive(false);
+
+    RectanglePansement.SetActive(false);
+    CerclePansement.SetActive(false);
+    EtoilePansement.SetActive(false);
+
+    HexagonePQ.SetActive(false);
+    RectanglePQ.SetActive(false);
+    CarréPQ.SetActive(false);
+    CerclePQ.SetActive(false);
+    EtoilePQ.SetActive(false);
+}
+	
+	// Update is called once per frame
+	void Update () {
+
+        timeleft -= Time.deltaTime;
+
+        if (timeleft < 2275)
+        {
+            if (timeleft > 2047.5)
+            {
+                CercleDissolvant.SetActive(true);
+                RectangleVentouse.SetActive(true);
+                CarréMascara.SetActive(true);
+                LosangePP.SetActive(true);
+            }
+
+        }
+
+        if (timeleft < 2047.5)
+        {
+            if (timeleft > 1820)
+            {
+                RectangleDissolvant.SetActive(true);
+
+                CercleDissolvant.SetActive(false);
+                RectangleVentouse.SetActive(false);
+                CarréMascara.SetActive(false);
+                LosangePP.SetActive(false);
+
+
+            }
+
+        }
+
+        if (timeleft < 1820)
+        {
+            if (timeleft > 1592.5)
+
+            {
+                LosangeVentouse.SetActive(true);
+                LosangeMascara.SetActive(true);
+                LosangeDentifrice.SetActive(true);
+
+                RectangleDissolvant.SetActive(false);
+
+            }
+
+        }
+        if (timeleft < 1592.5)
+        {
+            if (timeleft > 1365)
+            {
+                EtoileDentifrice.SetActive(true);
+
+                LosangeVentouse.SetActive(false);
+                LosangeMascara.SetActive(false);
+                LosangeDentifrice.SetActive(false);
+            }
+
+        }
+        if (timeleft < 1365)
+        {
+            if (timeleft > 1137.5)
+            {
+                CarréDentifrice.SetActive(true);
+
+                EtoileDentifrice.SetActive(false);
+            }
+
+        }
+
+
+
+        if (timeleft < 1137.5)
+        {
+            if (timeleft > 910)
+            {
+
+                RectanglePansement.SetActive(true);
+                HexagonePQ.SetActive(true);
+
+                CarréDentifrice.SetActive(false);
+            }
+
+        }
+        if (timeleft < 910)
+        {
+            if (timeleft > 682.5)
+            {
+                CerclePansement.SetActive(true);
+                CerclePQ.SetActive(true);
+                RectangleDissolvant.SetActive(true);
+                RectanglePP.SetActive(true);
+                TrianglePP.SetActive(true); 
+
+                RectanglePansement.SetActive(false);
+                HexagonePQ.SetActive(false);
+
+            }
+        }
+
+
+        if (timeleft < 682.5)
+
+        {
+            if (timeleft > 455)
+            {
+                EtoilePQ.SetActive(true);
+                CercleVentouse.SetActive(true);
+                HexagoneDissolvant.SetActive(true);
+                TriangleDentifrice.SetActive(true);
+
+         
+                CerclePansement.SetActive(false);
+                CerclePQ.SetActive(false);
+                RectangleDissolvant.SetActive(false);
+                RectanglePP.SetActive(false);
+                TrianglePP.SetActive(false);
+            }
+
+
+        }
+
+
+        if (timeleft < 455)
+        {
+            if (timeleft >227.5 )
+            {
+                TriangleVentouse.SetActive(true);
+                TriangleDissolvant.SetActive(true);
+                TriangleMascara.SetActive(true);
+                CerclePansement.SetActive(true);
+                EtoilePansement.SetActive(true);
+                RectanglePQ.SetActive(true);
+                LosangeDentifrice.SetActive(true);
+
+                EtoilePQ.SetActive(false);
+                CercleVentouse.SetActive(false);
+                HexagoneDissolvant.SetActive(false);
+                TriangleDentifrice.SetActive(false);
+
+
+            }
+
+        }
+
+        if (timeleft < 227.5)
+        {
+            if (timeleft > 0)
+            {
+                CarréPQ.SetActive(true);
+                CarréDentifrice.SetActive(true);
+                TriangleVentouse.SetActive(true);
+
+                TriangleVentouse.SetActive(false);
+                TriangleDissolvant.SetActive(false);
+                TriangleMascara.SetActive(false);
+                CerclePansement.SetActive(false);
+                EtoilePansement.SetActive(false);
+                RectanglePQ.SetActive(false);
+                LosangeDentifrice.SetActive(false);
+            }
+
+        }
+
+
+
+    }
+}

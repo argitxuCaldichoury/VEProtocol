@@ -1,0 +1,241 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TâcheFormeCuisine : MonoBehaviour {
+
+    public float timeleft = 2275.0f;
+
+    
+    public GameObject RectanglePelle;
+    public GameObject CerclePelle;
+    public GameObject CarréPelle;
+    public GameObject EtoilePelle;
+
+    public GameObject CarréBol;
+    public GameObject CercleBol;
+    public GameObject EtoileBol;
+    public GameObject TriangleBol;
+
+    public GameObject EtoilePoivre;
+    public GameObject TrianglePoivre;
+    public GameObject LosangePoivre;
+    public GameObject CerclePoivre;
+
+    public GameObject CercleThé;
+    public GameObject EtoileThé;
+    public GameObject RectangleThé;
+
+    public GameObject HexagoneTorchon;
+    public GameObject LosangeTorchon;
+    public GameObject RectangleTorchon;
+    public GameObject TriangleTorchon;
+
+    public GameObject CercleRouleau;
+    public GameObject TriangleRouleau;
+   
+    public GameObject HexagonePoele;
+    public GameObject CerclePoele;
+    public GameObject TrianglePoele;
+    public GameObject LosangePoele;
+   
+    // Use this for initialization
+    void Start () {
+
+
+     RectanglePelle.SetActive(false);
+     CerclePelle.SetActive(false);
+     CarréPelle.SetActive(false);
+     EtoilePelle.SetActive(false);
+
+     CarréBol.SetActive(false);
+     CercleBol.SetActive(false);
+     EtoileBol.SetActive(false);
+     TriangleBol.SetActive(false);
+
+     EtoilePoivre.SetActive(false);
+     TrianglePoivre.SetActive(false);
+     LosangePoivre.SetActive(false);
+     CerclePoivre.SetActive(false);
+
+     CercleThé.SetActive(false);
+     EtoileThé.SetActive(false);
+     RectangleThé.SetActive(false);
+
+     HexagoneTorchon.SetActive(false);
+     LosangeTorchon.SetActive(false);
+     RectangleTorchon.SetActive(false);
+     TriangleTorchon.SetActive(false);
+
+     CercleRouleau.SetActive(false);
+     TriangleRouleau.SetActive(false);
+
+     HexagonePoele.SetActive(false);
+     CerclePoele.SetActive(false);
+     TrianglePoele.SetActive(false);
+     LosangePoele.SetActive(false);
+}
+
+    // Update is called once per frame
+    void Update()
+    {
+        timeleft -= Time.deltaTime;
+
+        if (timeleft < 2275)
+        {
+            if (timeleft > 2047.5)
+            {
+                CarréPelle.SetActive(true);
+                CarréBol.SetActive(true);
+                EtoilePoivre.SetActive(true);
+            }
+
+        }
+        if (timeleft < 2047.5)
+        {
+            if (timeleft > 1820)
+            {
+                TrianglePoivre.SetActive(true);
+                CercleThé.SetActive(true);
+
+
+                CarréPelle.SetActive(false);
+                CarréBol.SetActive(false);
+                EtoilePoivre.SetActive(false);
+
+            }
+
+        }
+
+         if (timeleft < 1820)
+            {
+                if (timeleft > 1592.5)
+                {
+                CercleBol.SetActive(true);
+                CercleRouleau.SetActive(true);
+                HexagoneTorchon.SetActive(true);
+
+
+                TrianglePoivre.SetActive(false);
+                CercleThé.SetActive(false);
+            }
+
+        }
+          if (timeleft < 1592.5)
+        {
+            if (timeleft > 1365)
+            {
+                HexagoneTorchon.SetActive(true);
+                CercleBol.SetActive(false);
+                CercleRouleau.SetActive(false);
+            }
+
+        }
+        if (timeleft < 1365)
+        {
+            if (timeleft > 1137.5)
+            {
+                HexagoneTorchon.SetActive(false);
+                LosangeTorchon.SetActive(true);
+                RectangleTorchon.SetActive(true);
+                RectanglePelle.SetActive(true);
+                EtoilePelle.SetActive(true);
+                HexagonePoele.SetActive(true);
+                CarréBol.SetActive(true);
+
+
+
+            }
+
+        }
+
+        if (timeleft < 1137.5)
+        {
+            if (timeleft > 910)
+            {
+                LosangeTorchon.SetActive(false);
+                RectangleTorchon.SetActive(false);
+                RectanglePelle.SetActive(false);
+                EtoilePelle.SetActive(false);
+                HexagonePoele.SetActive(false);
+                CarréBol.SetActive(false);
+
+                CerclePoele.SetActive(true);
+                TrianglePoele.SetActive(true);
+                TriangleRouleau.SetActive(true);
+                LosangePoivre.SetActive(true);
+
+            }
+
+        }
+        if (timeleft < 910)
+        {
+            if (timeleft > 682.5)
+            {
+                CerclePoele.SetActive(false);
+                TrianglePoele.SetActive(false);
+                TriangleRouleau.SetActive(false);
+                LosangePoivre.SetActive(false);
+
+                EtoileBol.SetActive(true);
+                CerclePelle.SetActive(true);
+
+            }
+        }
+
+
+        if (timeleft < 682.5)
+
+        {
+            if (timeleft > 455)
+            {
+                CercleRouleau.SetActive(true);
+                EtoileBol.SetActive(false);
+                CerclePelle.SetActive(false);
+            }
+
+
+        }
+
+
+        if (timeleft < 455)
+        {
+            if (timeleft > 227.5)
+            {
+                CercleRouleau.SetActive(false);
+
+                EtoilePelle.SetActive(true);
+                TriangleTorchon.SetActive(true);
+                CerclePoivre.SetActive(true);
+                CercleBol.SetActive(true);
+                TriangleBol.SetActive(true);
+                CercleThé.SetActive(true);
+                LosangePoele.SetActive(true);
+
+
+            }
+
+        }
+
+        if (timeleft < 227.5)
+        {
+            if (timeleft > 0)
+            {
+                RectangleThé.SetActive(true);
+                HexagoneTorchon.SetActive(true);
+
+                EtoilePelle.SetActive(false);
+                TriangleTorchon.SetActive(false);
+                CerclePoivre.SetActive(false);
+                CercleBol.SetActive(false);
+                TriangleBol.SetActive(false);
+                CercleThé.SetActive(false);
+                LosangePoele.SetActive(false);
+
+
+
+            }
+
+        }
+    }
+}

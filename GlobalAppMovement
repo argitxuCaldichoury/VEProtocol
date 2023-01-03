@@ -1,0 +1,118 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GlobalAppMovement : MonoBehaviour{
+    
+  
+    public float timeleft = 2275.0f;
+    public GameObject Pièces;
+   
+   
+
+    // Use this for initialization
+    void Start()
+    {
+        Pièces = GameObject.Find("Pièces");
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        timeleft -= Time.deltaTime;
+
+      
+
+        if (timeleft < 2050)
+        {
+            if (timeleft >2047)
+            {
+
+                this.transform.Rotate(new Vector3(0, 40* Time.deltaTime, 0));
+
+            }
+        }
+
+        if (timeleft < 1823)
+        {
+            if (timeleft > 1820)
+            {
+
+                this.transform.Rotate(new Vector3(0, 40*Time.deltaTime, 0));
+
+            }
+        }
+        if (timeleft < 1593)
+        {
+            if (timeleft > 1592.8)
+            {
+
+                this.transform.Rotate(new Vector3(0, 80 * Time.deltaTime, 0));
+
+            }
+        }
+
+        if (timeleft < 1366)
+        {
+            if (timeleft > 1363)
+            {
+
+                this.transform.Rotate(new Vector3(0, 0, 0));
+
+            }
+        }
+        if (timeleft < 1140)
+        {
+            if (timeleft > 1137)
+            {
+
+                this.transform.Rotate(new Vector3(0, 40 * Time.deltaTime, 0));
+
+            }
+        }
+        if (timeleft < 911)
+        {
+            if (timeleft > 910.8)
+            {
+
+                this.transform.Rotate(new Vector3(0, 40 * Time.deltaTime, 0));
+
+            }
+        }
+
+        if (timeleft <686)
+        {
+            if (timeleft > 683)
+            {
+
+                this.transform.Rotate(new Vector3(0,40 *Time.deltaTime, 0));
+
+            }
+        }
+
+        if (timeleft < 458)
+        {
+            if (timeleft > 455)
+            {
+
+                this.transform.Rotate(new Vector3(0, 40 * Time.deltaTime, 0));
+
+            }
+        }
+        if (timeleft < 230)
+        {
+            if (timeleft > 227)
+            {
+
+                this.transform.Rotate(new Vector3(0,0, 0));
+
+            }
+        }
+     
+
+    }
+
+
+}
