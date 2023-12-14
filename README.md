@@ -6,3 +6,5 @@ The "Contextual conditioning protocol implemented in iVR" Word doc explains in d
 Scripts are available in the "Unity scripts" folder. Their specific function are explained in the Word doc. 
 
 The supplementary video illustrates an example of an experimental session. Specifically, it illustrates one tour around the apartment completed by a subject.  
+
+Note: The Word Doc. and video files are too large to be visualised directly on github. The latter must be downloaded. 
